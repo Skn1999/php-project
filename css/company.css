@@ -1,0 +1,208 @@
+.main{
+    background-color: #EDF1F4;
+    min-height: 100vh;
+    padding: 32px;
+    /* width: calc(100% -  ); */
+    font-family: Avenir, sans-serif;
+}
+
+.title{
+    color:#808080 ;
+    font-size: 18px;
+}
+
+.alertTitle{
+    color: #36CA8E;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.subtitle{
+    color: #808080;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.links{
+    color: #0D28FB;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.banner{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0px 15px 40px #36CA8E29;
+}
+.banner img{
+    margin-top: -1in;
+}
+
+.contentBlock{
+    margin: 50px 0;
+}
+
+.contentBlock .owl-carousel .owl-stage-outer{
+    padding: 0 0px;
+    z-index: 1;
+}
+
+.contentBlock .owl-carousel .owl-dots{
+    display: none;
+}
+
+.contentBlock .owl-carousel .owl-nav{
+    font-size: 44px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    margin-top: 0;
+    height: 100%;
+    width: calc(100% + 40px);
+}
+
+.jobCard{
+    background-color: white;
+    text-align: left;
+    text-transform: none;
+    padding: 10px 20px;
+    font-weight: 100;
+    
+}
+.jobCard .jobtitle{
+    color: #808080;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.jobCard .parameter{
+    color: #808080;
+    font-size: 14px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
+.jobCard p{
+    margin: 0;
+}
+
+.jobCard .paramValue{
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.jobCard .linkBtn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    width: 100%;
+}
+.jobCard .linkBtn .btn{
+    color: #36CA8E;
+    /* width: 100%; */
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 100;
+    /* border: 1px solid; */
+    margin: 0;
+    border-radius: 4px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.postJobForm{
+    min-width: 300px;
+    padding: 56px 40px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+}
+
+.postJobForm .links{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #0D28FB;
+}
+
+.postJobForm .btnRoot{
+    width: 100%;
+    box-shadow: none;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 0 !important;
+    padding: 14px 0;
+    font-weight: bold;
+    background-color: #36CA8E;
+    color: white;
+    margin: 32px 0;
+}
+
+.postJobForm .form-control:focus{
+    border-color: #36CA8E;
+    background-image: linear-gradient(0deg, #36CA8E 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0)
+}
+.postJobForm .is-focused [class*=" bmd-label"], .is-focused [class^=bmd-label]{
+    color: #36CA8E;
+}
+
+.navToggler{
+    position: fixed;
+    width: 40px;
+    height: 100vh;
+    padding: 0;
+}
+.mainContent{
+    width: calc( 100% - 40px );
+    margin-left: 40px;
+}
+
+.bmd-drawer-f-l>.bmd-layout-drawer{
+    width: 400px;
+    transform: translateX(-410px);
+}
+
+.sideDrawer{
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('/assets/collab.svg');
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.sideDrawer img{
+    width: fit-content;
+}
+
+.sideDrawer button{
+    color: #0D28FB;
+}
+
+.sideDrawer .logOutBtn{
+    transform: rotateY(180deg);
+    height: 16px;
+}
+
+.orgName{
+    margin: 10px 0;
+    color: #808080;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#myChart{
+    width: 100%;
+    height: 100%;
+    
+}
