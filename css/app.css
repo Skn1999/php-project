@@ -10883,7 +10883,7 @@ a.text-dark:focus {
 
 @font-face {
   font-family: "Avenir";
-  src: local("AvenirNextLTPro-Bold"), url(/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
+  src: local("AvenirNextLTPro-Bold"), url(/assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
 }
 
 .container {
@@ -10897,7 +10897,7 @@ a.text-dark:focus {
 }
 
 .person-bg{
-  background-image: url(/assets/signup.png);
+  background-image: url(/assets/images/signup.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: inherit;
@@ -10958,7 +10958,7 @@ a.text-dark:focus {
 }
 
 .roleBg {
-  background: url(../assets/images/role.png);
+  background: url(../assets/images/images/role.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
