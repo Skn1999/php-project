@@ -28,7 +28,7 @@
             </p>
           </div>
           <div>
-            {{-- <a href="/company/{{ $data['data']->company_id }}/edit"> <button class="btn" >Edit Profile</button></a> --}}
+            
             <a href="/login"> <button class="btn" >Log Out <img class="logOutBtn" src="/assets/svgs/back-arrow.svg" alt=""> </button></a>
         </div>
         </div>
