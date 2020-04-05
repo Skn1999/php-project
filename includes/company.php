@@ -4,16 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CRS</title>
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
     <!-- {{-- Carousel CSS --}} -->
-    <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/carousel/dist/assets/owl.theme.default.min.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/css/company.css">
+    <link rel="stylesheet" href="../css/company.css">
     
 </head>
 <body>
@@ -29,7 +29,7 @@
           </div>
           <div>
             
-            <a href="/login"> <button class="btn" >Log Out <img class="logOutBtn" src="/assets/svgs/back-arrow.svg" alt=""> </button></a>
+            <a href="./login.php"> <button class="btn" >Log Out <img class="logOutBtn" src="/assets/svgs/back-arrow.svg" alt=""> </button></a>
         </div>
         </div>
         <main class="bmd-layout-content">
@@ -94,22 +94,22 @@
                       <div class="form-group">
                           <label for="" class="bmd-label-floating">Job Position</label>
                           <input class="form-control" id="jobPosition" name="jobPosition" label="" type="text" variant="outlined" >
-                          <span class="text-danger">{{ $errors->first("jobPosition")}}</span>
+                          <!-- <span class="text-danger">{{ $errors->first("jobPosition")}}</span> -->
                       </div>
                       <div class="form-group">
                           <label for="" class="bmd-label-floating">Skills Required ( Comma separated )</label>
                           <input class="form-control" id="skills" name="skills" label="" type="text" variant="outlined" >
-                          <span class="text-danger">{{ $errors->first("skills")}}</span>
+                          <!-- <span class="text-danger">{{ $errors->first("skills")}}</span> -->
                       </div>
                       <div class="form-group">
                           <label for="" class="bmd-label-floating">Eligibility criteria</label>
                           <input class="form-control" id="eligibility" name="eligibility" label="" type="text" variant="outlined" >
-                          <span class="text-danger">{{ $errors->first("eligibility")}}</span>
+                          <!-- <span class="text-danger">{{ $errors->first("eligibility")}}</span> -->
                       </div>
                       <div class="form-group">
                           <label for="" class="bmd-label-floating">Number of Vacancies</label>
                           <input class="form-control" id="vacancy" name="vacancy" label="" type="number" variant="outlined" >
-                          <span class="text-danger">{{ $errors->first("vacancy")}}</span>
+                          <!-- <span class="text-danger">{{ $errors->first("vacancy")}}</span> -->
                       </div>
                       <div class="form-group">
                           <label for="" class="bmd-label-floating">Location of the Job</label>

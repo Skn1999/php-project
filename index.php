@@ -78,8 +78,8 @@
                             <a href="./includes/login.php">
                                 <button class="link">Login</button>
                             </a>
-                            <a href="/company/create"> 
-                                <button class="inverted" >Sign Up</button>
+                            <a href="./includes/signup-company.php"> 
+                                <button >Sign Up</button>
                             </a>
                         </div>
                 </div>
@@ -94,12 +94,12 @@
                         
                         <div class="containerBtns mt-5">
                             <div>
-                                <a href="/institute/create" >
+                                <a href="./includes/signup-institute.php" >
                                 <button class="inverted">Looking for a job</button>
                                 </a>
                             </div>
                             <div > 
-                                <a href="/company/create">
+                                <a href="./includes/signup-company.php">
                                     <button >Want to hire?</button> 
                                 </a>
                             </div>
@@ -131,7 +131,7 @@
                     
               </div>
 
-              <div  class=" container wrapper roleBg" >
+              <div class=" container wrapper roleBg" >
                   <div class="row">
                     <div class=" col-sm col-md-4 offset-md-3 ">
                         <h2 class="heading gray">
@@ -143,7 +143,7 @@
                             </p>
                         </div>
                         <div class=" mt-5 ">
-                            <button inverted>Let's Get Started</button>
+                            <button>Let's Get Started</button>
                         </div>
                     </div>
                     <div class=" col-sm col-md-5">

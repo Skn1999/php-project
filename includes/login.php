@@ -1,3 +1,17 @@
+<?php
+     if( isset($_POST['login'])){
+         $type = $_POST['type'];
+
+         if( $type == 'company'){
+             header("location: ./company.php");
+         }
+         else{
+             header("location: ./institute.php");
+         }
+     }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,12 +42,12 @@
                         </div>
                         <div class="row align-items-end">
                             <div class="w-100">
-                                <a href="/company/create">
+                                <a href="./signup-company.php">
                                     <p class="para white-text">Are you an Company? <em> Sign up here.</em>
                                     </p>
                                 </a>
                             </div>
-                            <a href="/institute/create">
+                            <a href="./signup-institute.php">
                                 <p class="para white-text">Are you an Institute? <em> Sign up here.</em>
                                 </p>
                             </a>
@@ -46,18 +60,18 @@
                             <h2 style="text-align: center; margin: auto 0; width:100%" class="sub-heading">Login</h2>
                         </div>
                     </div>
-                    <form style="padding: 2rem; height: 500px" name="loginForm" action="/loginForm" method="post">
-                        <!-- @csrf -->
+                    <form style="padding: 2rem; height: 500px" name="loginForm" action=<?php echo $_SERVER["PHP_SELF"]; ?> method="post">
+                        
                         <div class="form-group ">
                             <label for="email">Email</label>
                             <input type="email" class="form-control form-control-lg" name="email">
-                            <span class="text-danger">{{ $errors->first("email")}}</span>
+                            <!-- <span class="text-danger">{{ $errors->first("email")}}</span> -->
                         </div>
                         
                         <div class="form-group ">
                             <label for="password">Set password</label>
                             <input type="password" class="form-control form-control-lg" name="password">
-                            <span class="text-danger">{{ $errors->first("password")}}</span>
+                            <!-- <span class="text-danger">{{ $errors->first("password")}}</span> -->
                         </div>
                         <div class="form-group">
                             <label for="type">Company/Institute</label>
@@ -68,7 +82,7 @@
                         </div>
         
                         <div class="form-group mt-5">
-                            <button type="submit" class=" w-100">Sign up</button>
+                            <button name="login" type="submit" class=" w-100">Sign In</button>
                         </div>
                         
         

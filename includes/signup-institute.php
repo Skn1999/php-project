@@ -27,12 +27,12 @@
             </div>
             <div class="row align-items-end">
                 <div class="w-100">
-                    <a href="/company/create">
+                    <a href="./signup-company.php">
                         <p class="para white-text">Are you an Company? <em> Sign up here.</em>
                         </p>
                     </a>
                 </div>
-                <a href="/login">
+                <a href="./login.php">
                     <p class="para white-text">Already a member? <em> Login here.</em>
                     </p>
                 </a>
@@ -44,25 +44,25 @@
             <!-- @csrf -->
             <div class="form-group ">
                 <label for="name">Let's start with the name of the institute</label>
-                <input type="text" class="form-control" name="name"  value={{ old('name')}} >
+                <input type="text" class="form-control" name="name"  value="" >
                 <span class="text-danger">
                     <!-- {{ $errors->first("name")}} -->
                 </span>
             </div>
             <div class="form-group ">
                 <label for="year">Affiliation Number</label>
-                <input type="number" class="form-control" name="affl" value={{ old('affl')}}>
+                <input type="number" class="form-control" name="affl" value="">
             </div>
             <div class="form-group ">
                 <label for="email">Email of your company</label>
-                <input type="email" class="form-control" name="email" value={{ old('email')}} >
+                <input type="email" class="form-control" name="email" value="" >
                 <span class="text-danger">
                     <!-- {{ $errors->first("email")}} -->
                 </span>
             </div>
             <div class="form-group ">
                 <label for="year">Estb. in?</label>
-                <input type="number" class="form-control" name="year" value={{ old('year')}} required>
+                <input type="number" class="form-control" name="year" value="" required>
                 <span class="text-danger">
                     <!-- {{ $errors->first("year")}} -->
                 </span>

@@ -29,12 +29,12 @@
                     </div>
                     <div class="row align-items-end">
                         <div class="w-100">
-                            <a href="/institute/create">
+                            <a href="./signup-institute.php">
                                 <p class="para white-text">Are you an Institute? <em> Sign up here.</em>
                                 </p>
                             </a>
                         </div>
-                        <a href="/login">
+                        <a href="./login.php">
                             <p class="para white-text">Already a member? <em> Login here.</em>
                             </p>
                         </a>
@@ -46,28 +46,28 @@
                     <!-- @csrf -->
                     <div class="form-group ">
                         <label for="name">Let's start with the name of the company</label>
-                        <input type="text" class="form-control" name="name" value={{ old('name')}}>
+                        <input type="text" class="form-control" name="name" value="">
                         <span class="text-danger">
                             <!-- {{ $errors->first("name")}} -->
                         </span>
                     </div>
                     <div class="form-group ">
                         <label for="year">The year you got registered</label>
-                        <input type="number" class="form-control" name="year" value={{ old('year')}}>
+                        <input type="number" class="form-control" name="year" value="">
                         <span class="text-danger">
                             <!-- {{ $errors->first("year")}} -->
                         </span>
                     </div>
                     <div class="form-group ">
                         <label for="domain">Domain of your company</label>
-                        <input type="text" class="form-control" name="domain" value={{ old('domain')}}>
+                        <input type="text" class="form-control" name="domain" value="">
                         <span class="text-danger">
                             <!-- {{ $errors->first("domain")}} -->
                         </span>
                     </div>
                     <div class="form-group ">
                         <label for="email">Email of your company</label>
-                        <input type="email" class="form-control" name="email" value={{ old('email')}}>
+                        <input type="email" class="form-control" name="email" value="">
                         <span class="text-danger">
                             <!-- {{ $errors->first("email")}} -->
                         </span>

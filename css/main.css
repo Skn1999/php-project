@@ -49,7 +49,7 @@
     margin-top: 40px;
 }
 
-button{
+.btn{
     font-size: 0.875rem;
     min-width: 64px;
     box-sizing: border-box;
@@ -78,14 +78,21 @@ button{
   background-size: cover;
 }
 
+.roleBg {
+    background-image: url(../assets/images/role.png);
+    height: 100vh;
+    width : 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  }
 
-
-button:hover{
+.btn:hover{
     color: #36CA8E;
     background-color: white;
 }
 
-button.inverted{
+.btn.inverted{
     color: #36CA8E;
     border: none;
     outline: none;
@@ -96,17 +103,17 @@ button.inverted{
     border-radius: 0;
 }
 
-button.inverted:hover{
+.btn.inverted:hover{
     background-color: #36CA8E;
     color: white;
 }
 
-button.link{
+.btn.link{
     background: transparent;
     color: white;
 }
 
-button.link:hover{
+.btn.link:hover{
     opacity: .9;
 }
 

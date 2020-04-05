@@ -10957,13 +10957,6 @@ a.text-dark:focus {
   background: #7a7a7a;
 }
 
-.roleBg {
-  background: url(../assets/images/images/role.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-}
-
 * {
   margin: 0;
   padding: 0;
