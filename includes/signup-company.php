@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/button.css">
     <title>Sign up Company</title>
 </head>
 
@@ -41,10 +41,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm p-0">
-                <form style="padding: 2rem" class="grayBg" action="/company" method="post">
+            <div class="col-sm-12 col-md-6 p-0">
+                <form style="padding: 2rem; width:100%" class="grayBg" action="/company" method="post" autocomplete="off" autofill="off">
                     <!-- @csrf -->
-                    <div class="form-group ">
+                    <div class="form-group">
                         <label for="name">Let's start with the name of the company</label>
                         <input type="text" class="form-control" name="name" value="">
                         <span class="text-danger">

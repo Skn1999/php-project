@@ -4,12 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Company Recruitment System</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="./css/app.css">
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/button.css">
+
         <!-- Styles -->
         <style>
             html, body {
@@ -76,10 +78,10 @@
                         </div>
                         <div class="" >
                             <a href="./includes/login.php">
-                                <button class="link">Login</button>
+                                <button class="btn link">Login</button>
                             </a>
                             <a href="./includes/signup-company.php"> 
-                                <button >Sign Up</button>
+                                <button class="btn" >Sign Up</button>
                             </a>
                         </div>
                 </div>
@@ -95,12 +97,12 @@
                         <div class="containerBtns mt-5">
                             <div>
                                 <a href="./includes/signup-institute.php" >
-                                <button class="inverted">Looking for a job</button>
+                                <button class="btn inverted">Looking for a job</button>
                                 </a>
                             </div>
                             <div > 
                                 <a href="./includes/signup-company.php">
-                                    <button >Want to hire?</button> 
+                                    <button class="btn" >Want to hire?</button> 
                                 </a>
                             </div>
                         </div>
@@ -143,7 +145,7 @@
                             </p>
                         </div>
                         <div class=" mt-5 ">
-                            <button>Let's Get Started</button>
+                            <button class="btn">Let's Get Started</button>
                         </div>
                     </div>
                     <div class=" col-sm col-md-5">
