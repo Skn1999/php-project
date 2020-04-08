@@ -2,7 +2,7 @@
 		
 	// echo("arg1");	
 
-	// $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+	// $con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
 
 	$con=mysqli_connect("localhost", "root", null) or die(mysqli_error($con));
 	mysqli_query($con, "CREATE DATABASE CRS");

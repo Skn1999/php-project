@@ -8,7 +8,9 @@
 	// echo $pwd;
 	// echo $orgTyp;
 
-	$con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+	$con=mysqli_connect("localhost", "root", null) or die(mysqli_error($con));
+	mysqli_query($con, "CREATE DATABASE CRS");
+	mysqli_query($con, "USE CRS");
 	session_start();
 
 

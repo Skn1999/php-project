@@ -28,7 +28,7 @@
             <img src="./../assets/images/blue-logo.png" alt="hired.">
 
               <?php
-                  $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+                  $con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
                   session_start();
                   $email=$_SESSION['email'];
 
@@ -41,7 +41,7 @@
                   $row = mysqli_fetch_array($selQryRst);
               ?>
               <p class="orgName">
-                  Organization's Name:<h3> <?php echo(strtoupper($row['name'])) ;?></h3>
+                  <?php echo($row['name']) ;?>
               </p>
           </div>
 
@@ -51,7 +51,7 @@
           </div> -->
           <div>
             
-            <a href="/tmp/logout.php"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
+            <a href="./../logout.php"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
         </div>
         </div>
         <main class="bmd-layout-content">
@@ -86,8 +86,8 @@
 
                         <?php
 
-                            $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
-                            session_start();
+                            $con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
+                            // session_start();
                             $email=$_SESSION['email'];
 
                             $selQry = "select * from job where email='$email';";
@@ -148,8 +148,57 @@
                   </div>
               
               </div>
+              <div class="postJobForm  col-md-4 col-sm-12">
+                  <p class="links">Post Job</p>
+                  <form action="../jCompanyJob/jPostJob.php" method="POST" class="postJob" id="form">
+                      <!-- @csrf -->
+                      <div class="form-group">
+                          <label for="jobPosition" class="bmd-label-floating">Job Position</label>
+                          <input class="form-control" id="jobPosition" name="jobPosition" type="text" variant="outlined">
+                          <span class="text-danger" id="jobPosErr"></span>
+                      </div>
 
-              <script>
+                      <div class="form-group">
+                          <label for="skills" class="bmd-label-floating">Skills Required ( Comma separated )</label>
+                          <input class="form-control" id="skills" name="skills" type="text" variant="outlined">
+                          <span class="text-danger" id="skillErr"></span>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="salary" class="bmd-label-floating">Salary(LPA)</label>
+                          <input class="form-control" name="salary" type="text" variant="outlined" id="sal">
+                          <span class="text-danger" id="salErr"></span>
+                      </div>
+
+                      <!-- <div class="form-group">
+                          <label for="eligibility" class="bmd-label-floating">Eligibility criteria</label>
+                          <input class="form-control" id="eligibility" name="eligibility" type="text" variant="outlined">
+                          <span class="text-danger">{{ $errors->first("eligibility")}}</span>
+                      </div> -->
+
+                      <div class="form-group">
+                          <label for="vacancy" class="bmd-label-floating">Number of Vacancies</label>
+                          <input class="form-control" id="vacancy" name="vacancy"  type="number" variant="outlined">
+                          <span class="text-danger" id="vacErr"></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="location" class="bmd-label-floating">Job Location</label>
+                          <input class="form-control" id="location" name="location" type="text" variant="outlined">
+                          <span class="text-danger" id="jobLocErr"></span>
+                      </div>
+                      <button type="submit" variant="contained" class="btn btnRoot" >Post job</button>
+                  </form>
+              </div>
+          </div>
+          </div>
+        </main>
+    </div>
+    
+    
+
+    
+    <!-- {{-- Bootstrap JS --}} -->
+    <script>
         
                 $(function() {
                     
@@ -211,58 +260,6 @@
                     });
                 });
             </script>
-
-
-              <div class="postJobForm  col-md-4 col-sm-12">
-                  <p class="links">Post Job</p>
-                  <form action="../jCompanyJob/jPostJob.php" method="POST" class="postJob" id="form">
-                      <!-- @csrf -->
-                      <div class="form-group">
-                          <label for="jobPosition" class="bmd-label-floating">Job Position</label>
-                          <input class="form-control" id="jobPosition" name="jobPosition" type="text" variant="outlined">
-                          <span class="text-danger" id="jobPosErr"></span>
-                      </div>
-
-                      <div class="form-group">
-                          <label for="skills" class="bmd-label-floating">Skills Required ( Comma separated )</label>
-                          <input class="form-control" id="skills" name="skills" type="text" variant="outlined">
-                          <span class="text-danger" id="skillErr"></span>
-                      </div>
-
-                      <div class="form-group">
-                          <label for="salary" class="bmd-label-floating">Salary(LPA)</label>
-                          <input class="form-control" name="salary" type="text" variant="outlined" id="sal">
-                          <span class="text-danger" id="salErr"></span>
-                      </div>
-
-                      <!-- <div class="form-group">
-                          <label for="eligibility" class="bmd-label-floating">Eligibility criteria</label>
-                          <input class="form-control" id="eligibility" name="eligibility" type="text" variant="outlined">
-                          <span class="text-danger">{{ $errors->first("eligibility")}}</span>
-                      </div> -->
-
-                      <div class="form-group">
-                          <label for="vacancy" class="bmd-label-floating">Number of Vacancies</label>
-                          <input class="form-control" id="vacancy" name="vacancy"  type="number" variant="outlined">
-                          <span class="text-danger" id="vacErr"></span>
-                      </div>
-                      <div class="form-group">
-                          <label for="location" class="bmd-label-floating">Job Location</label>
-                          <input class="form-control" id="location" name="location" type="text" variant="outlined">
-                          <span class="text-danger" id="jobLocErr"></span>
-                      </div>
-                      <button type="submit" variant="contained" class="btn btnRoot" >Post job</button>
-                  </form>
-              </div>
-          </div>
-          </div>
-        </main>
-    </div>
-    
-    
-
-    
-    <!-- {{-- Bootstrap JS --}} -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>

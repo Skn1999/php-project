@@ -27,7 +27,7 @@
 
             <?php
 
-                $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+                $con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
                 session_start();
                 $email=$_SESSION['email'];
 
@@ -40,14 +40,14 @@
                 $row = mysqli_fetch_array($selQryRst);
             ?>
             <p class="orgName">
-                Organization's Name:<h3> <?php echo(strtoupper($row['name'])) ;?></h3>
-            </p>
+                  <?php echo($row['name']) ;?>
+              </p>
 
 
           </div>
           <div>
             <!-- {{-- <a href="/company/{{ $data['data']->company_id }}/edit"> <button class="btn" >Edit Profile</button></a> --}} -->
-            <a href="/tmp/logout.php"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
+            <a href="./../logout.php"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
         </div>
         </div>
         <main class="bmd-layout-content">
@@ -82,9 +82,9 @@
 
                     <?php
 
-                        $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+                        $con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
 
-                        session_start();
+                        // session_start();
                         $email=$_SESSION['email'];
 
                         // echo($email);
