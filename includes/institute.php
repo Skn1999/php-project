@@ -280,7 +280,7 @@
     </script>
     <!-- {{-- Carousel JS --}} -->
     <!-- {{-- <script src="/jquery-3.4.1.js"></script> --}} -->
-    <script src="/js/owl.carousel.js"></script>
+    <script src="./../js/owl.carousel.js"></script>
     <script>
         $(".owl-carousel").owlCarousel({
         margin:10,
