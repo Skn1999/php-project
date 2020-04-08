@@ -22,16 +22,6 @@
     <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
         <div id="dw-s2" class="bmd-layout-drawer bg-faded sideDrawer ">
           <div>
-<<<<<<< HEAD
-            <img src="/assets/images/blue-logo.png" alt="hired.">
-            <p class="orgName">
-              organisation's name
-            </p>
-          </div>
-          <div>
-            <!-- {{-- <a href="/company/{{ $data['data']->company_id }}/edit"> <button class="btn" >Edit Profile</button></a> --}} -->
-            <a href="./login.php"> <button class="btn" >Log Out <img class="logOutBtn" src="/assets/svgs/back-arrow.svg" alt=""> </button></a>
-=======
             <img src="./../assets/images/blue-logo.png" alt="hired.">
             
 
@@ -58,7 +48,6 @@
           <div>
             <!-- {{-- <a href="/company/{{ $data['data']->company_id }}/edit"> <button class="btn" >Edit Profile</button></a> --}} -->
             <a href="/tmp/logout.php"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
         </div>
         </div>
         <main class="bmd-layout-content">
@@ -70,11 +59,7 @@
             <!-- @include('inc.message') -->
             <div class="row">
                 <div class="main col-sm-12 col-md-8" >
-<<<<<<< HEAD
-                    <img src="/assets/images/blue-logo.png" alt="hired."/>
-=======
                     <img src="./../assets/images/blue-logo.png" alt="hired."/>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                     <div class='contentBlock' >
                         <h4 class="sub-heading">DashBoard</h4>
                         <div class="banner">
@@ -84,46 +69,15 @@
                                 <p class="links">Need help ?</p>
                             </div>
                             <div>
-<<<<<<< HEAD
-                                <img src="/assets/svgs/work-.svg" alt=""/>
-=======
                                 <img src="./../assets/svgs/work-.svg" alt=""/>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                             </div>
                         </div>
                     </div>
                 
-<<<<<<< HEAD
-=======
-
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                     <!-- {{-- Recent Jobs --}} -->
                     <div class='contentBlock' >
                         <h4 class="sub-heading">Recently Added</h4>
                         <div class="owl-carousel owl-theme">
-<<<<<<< HEAD
-                            <!-- for loop start -->
-                            <!-- @foreach ( $data['jobs'] as $job) -->
-                                <div class="item">
-                                    <div class="jobCard" >
-                                        <h2 class="jobtitle"> {{ $job['job_position']}} </h2>
-                                        <p>
-                                            <span class="parameter">Posted by : </span>
-                                            <span class="paramValue"></span>
-                                        </p>
-                                        <p>
-                                            <span class="parameter">Salary : </span>
-                                            <span class="paramValue">8 LPA</span>
-                                        </p>
-                                        <a href="/job/{{$job['job_id']}}" class="linkBtn">
-                                            <span class="btn">
-                                                VIEW MORE
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            <!-- @endforeach -->
-=======
 
                     <?php
 
@@ -182,7 +136,6 @@
                         }
                     ?>    
 
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                         </div>
                     </div>
                 
@@ -204,10 +157,6 @@
     </div>
     
     
-<<<<<<< HEAD
-
-=======
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
     
     <!-- {{-- Bootstrap JS --}} -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

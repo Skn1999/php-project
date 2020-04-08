@@ -9,23 +9,14 @@
     <link rel="stylesheet" href="../css/owl.carousel.css">
     <link rel="stylesheet" href="../css/carousel/dist/assets/owl.theme.default.min.css">
 
-<<<<<<< HEAD
-    <!-- Bootstrap CSS -->
-=======
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
     <!-- Bootstrap CSS -->
 
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../css/company.css">
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
 </head>
 <body>
 
@@ -33,16 +24,6 @@
     <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
         <div id="dw-s2" class="bmd-layout-drawer bg-faded sideDrawer ">
           <div>
-<<<<<<< HEAD
-            <img src="/assets/images/blue-logo.png" alt="hired.">
-            <p class="orgName">
-              organisation's name
-            </p>
-          </div>
-          <div>
-            
-            <a href="./login.php"> <button class="btn" >Log Out <img class="logOutBtn" src="/assets/svgs/back-arrow.svg" alt=""> </button></a>
-=======
             <img src="./../assets/images/blue-logo.png" alt="hired.">
 
               <?php
@@ -70,7 +51,6 @@
           <div>
             
             <a href="/tmp/logout.php"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
         </div>
         </div>
         <main class="bmd-layout-content">
@@ -82,11 +62,7 @@
             <!-- @include('inc.message') -->
             <div class="row">
               <div class="main col-md-8 col-sm-12" >
-<<<<<<< HEAD
-                  <img src="/assets/images/blue-logo.png" alt="hired."/>
-=======
                   <img src="./../assets/images/blue-logo.png" alt="hired."/>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                   <div class='contentBlock' >
                       <h4 class="sub-heading">DashBoard</h4>
                       <div class="banner">
@@ -96,11 +72,7 @@
                               <p class="links">Need help ?</p>
                           </div>
                           <div>
-<<<<<<< HEAD
-                              <img src="/assets/svgs/work-.svg" alt=""/>
-=======
                               <img src="./../assets/svgs/work-.svg" alt=""/>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                           </div>
                       </div>
                   </div>
@@ -109,49 +81,24 @@
                   <div class='contentBlock' >
                       <h4 class="sub-heading">Pending</h4>
                       <div class="owl-carousel owl-theme">
-<<<<<<< HEAD
-                        <!-- fr loop start -->
-                          <!-- @foreach ( $data['jobs'] as $job) -->
-                              <div class="item">
-                                  <div class="jobCard" >
-                                      <h2 class="jobtitle"> {{ $job['job_position']}} </h2>
-                                      <p>
-                                          <span class="parameter">Posted by : </span>
-                                          <span class="paramValue">{{ $data['data']->name }}</span>
-                                      </p>
-                                      <p>
-                                          <span class="parameter">Salary : </span>
-                                          <span class="paramValue">10 LPA</span>
-                                      </p>
-                                      <a href="/job/{{$job['job_id']}}" class="linkBtn">
-                                          <span class="btn">
-                                              VIEW MORE
-                                          </span>
-                                      </a>
-                                  </div>
-                              </div>
-                              
-                              <!-- for loop end -->
-                          
-=======
 
 
                         <?php
 
-                            $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
-                            session_start();
-                            $email=$_SESSION['email'];
+                        //     $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+                        //     session_start();
+                        //     $email=$_SESSION['email'];
 
-                            $selQry = "select * from job where email='$email';";
-                            $selQryRst = mysqli_query($con,$selQry) or die(mysqli_error($con));
+                        //     $selQry = "select * from job where email='$email';";
+                        //     $selQryRst = mysqli_query($con,$selQry) or die(mysqli_error($con));
 
-                            // $nor=0;
-                            $nor=mysqli_num_rows($selQryRst);
+                        //     // $nor=0;
+                        //     $nor=mysqli_num_rows($selQryRst);
 
-                            // echo $nor;
+                        //     // echo $nor;
 
-                          if(!mysqli_num_rows($selQryRst))
-                          {
+                        //   if(!mysqli_num_rows($selQryRst))
+                        //   {
                         ?>
                              <div class="item">
                                <div class="jobCard">
@@ -161,27 +108,28 @@
                                </div>
                              </div>
                         <?php
-                        }
-                          while($row = mysqli_fetch_array($selQryRst))
+                        // }
+                        //   while($row = mysqli_fetch_array($selQryRst))
+                            while($row <5 )
                           {
                         ?>
                                   <div class="item">
                                     <div class="jobCard">
-                                        <h2 class="jobtitle">Job Profile: <?php echo ($row['jobPos']);?> </h2>
+                                        <h2 class="jobtitle">Job Profile: Designer </h2>
                                         <p>
                                             <span class="parameter">Posted by : </span>
-                                            <span class="paramValue"><?php echo ($row['name']);?></span>
+                                            <span class="paramValue">XYZ</span>
                                         </p>
 
                                         <p>
                                             <span class="parameter">Job Location : </span>
-                                            <span class="paramValue"> <?php echo ($row['address']);?> </span>
+                                            <span class="paramValue"> Bangalore </span>
                                         </p>
 
 
                                         <p>
                                             <span class="parameter">Salary : </span>
-                                            <span class="paramValue"><?php echo($row['salary']);?> LPA</span>
+                                            <span class="paramValue">8 LPA</span>
                                         </p>
 
                                         <!-- <a href="#" class="linkBtn">
@@ -196,41 +144,10 @@
                             }
                           ?>
                                                     
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                       </div>
                   </div>
               
               </div>
-<<<<<<< HEAD
-              <div class="postJobForm  col-md-4 col-sm-12">
-                  <p class="links">Post Job</p>
-                  <form action="/job/{{$data['data']->company_id}}" method="POST" class="postJob" >
-                      <!-- @csrf -->
-                      <div class="form-group">
-                          <label for="" class="bmd-label-floating">Job Position</label>
-                          <input class="form-control" id="jobPosition" name="jobPosition" label="" type="text" variant="outlined" >
-                          <!-- <span class="text-danger">{{ $errors->first("jobPosition")}}</span> -->
-                      </div>
-                      <div class="form-group">
-                          <label for="" class="bmd-label-floating">Skills Required ( Comma separated )</label>
-                          <input class="form-control" id="skills" name="skills" label="" type="text" variant="outlined" >
-                          <!-- <span class="text-danger">{{ $errors->first("skills")}}</span> -->
-                      </div>
-                      <div class="form-group">
-                          <label for="" class="bmd-label-floating">Eligibility criteria</label>
-                          <input class="form-control" id="eligibility" name="eligibility" label="" type="text" variant="outlined" >
-                          <!-- <span class="text-danger">{{ $errors->first("eligibility")}}</span> -->
-                      </div>
-                      <div class="form-group">
-                          <label for="" class="bmd-label-floating">Number of Vacancies</label>
-                          <input class="form-control" id="vacancy" name="vacancy" label="" type="number" variant="outlined" >
-                          <!-- <span class="text-danger">{{ $errors->first("vacancy")}}</span> -->
-                      </div>
-                      <div class="form-group">
-                          <label for="" class="bmd-label-floating">Location of the Job</label>
-                          <input class="form-control" id="location" name="location" label="" type="text" variant="outlined" >
-                          
-=======
 
               <script>
         
@@ -318,12 +235,6 @@
                           <span class="text-danger" id="salErr"></span>
                       </div>
 
-                      <!-- <div class="form-group">
-                          <label for="eligibility" class="bmd-label-floating">Eligibility criteria</label>
-                          <input class="form-control" id="eligibility" name="eligibility" type="text" variant="outlined">
-                          <span class="text-danger">{{ $errors->first("eligibility")}}</span>
-                      </div> -->
-
                       <div class="form-group">
                           <label for="vacancy" class="bmd-label-floating">Number of Vacancies</label>
                           <input class="form-control" id="vacancy" name="vacancy"  type="number" variant="outlined">
@@ -333,7 +244,6 @@
                           <label for="location" class="bmd-label-floating">Job Location</label>
                           <input class="form-control" id="location" name="location" type="text" variant="outlined">
                           <span class="text-danger" id="jobLocErr"></span>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                       </div>
                       <button type="submit" variant="contained" class="btn btnRoot" >Post job</button>
                   </form>
@@ -354,22 +264,22 @@
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     <!-- {{-- Carousel JS --}} -->
     <!-- {{-- <script src="/jquery-3.4.1.js"></script> --}} -->
-    <script src="/js/owl.carousel.js"></script>
+    <script src="../js/owl.carousel.js"></script>
     <script>
         $(".owl-carousel").owlCarousel({
-        margin:10,
-        nav:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:4
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
             }
-        }
     })
     </script>
 </body>

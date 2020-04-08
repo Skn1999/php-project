@@ -13,11 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
-<<<<<<< HEAD
-    <link rel="stylesheet" href="/css/company.css">
-=======
     <link rel="stylesheet" href="../css/company.css">
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
     
 </head>
 <body>
@@ -26,22 +22,14 @@
     <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
         <div id="dw-s2" class="bmd-layout-drawer bg-faded sideDrawer ">
           <div>
-<<<<<<< HEAD
-            <img src="/assets/images/blue-logo.png" alt="hired.">
-=======
             <img src="./../assets/images/blue-logo.png" alt="hired.">
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
             <p class="orgName">
               Organisation's Name
             </p>
           </div>
           <div>
             <!-- {{-- <a href="/company/{{ $data['data']->company_id }}/edit"> <button class="btn" >Edit Profile</button></a> --}} -->
-<<<<<<< HEAD
-            <a href="/login"> <button class="btn" >Log Out <img class="logOutBtn" src="/assets/svgs/back-arrow.svg" alt=""> </button></a>
-=======
             <a href="/login"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
         </div>
         </div>
         <main class="bmd-layout-content">
@@ -57,11 +45,6 @@
               <h1 class="mt-3">Job Info</h1>
               <div class="row paper w-100 py-5 px-5">
       
-<<<<<<< HEAD
-                  <div class="col-12">
-                      <p class="sub-heading">Posted By:</p>
-                      <h1 class="heading2">{{ $data['company']->name }} </h1>
-=======
                 <?php
 
                   $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
@@ -89,7 +72,6 @@
                   <div class="col-12">
                       <p class="sub-heading">Posted By:</p>
                         <h1 class="heading2"><?php echo($row['name']);?></h1>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                       <hr />
                   </div>
                   
@@ -98,24 +80,6 @@
                       <div class="row mt-3 align-items-center">
                           <div class="col">
                               <p class="sub-title">Job Title</p>
-<<<<<<< HEAD
-                              <h1 class="heading2">{{ $data['job']->job_position }} </h1>
-                          </div>
-                          <div class="col">
-                              <p class="sub-title">Eligibility</p>
-                              <p class="para"> {{$data['job']->eligibility}} </p>
-                          </div>
-                          <div class="col">
-                              <p class="sub-title">Number of vacancies</p>
-                              <p class="para"> {{$data['job']->no_of_vacancies}} </p>
-                          </div>
-                          <div class="col">
-                              <p class="sub-title">Location</p>
-                              <p class="para"> {{$data['job']->location}} </p>
-                          </div>
-                      </div>
-                      <hr />
-=======
                               <h1 class="heading2"><?php echo($row['jobPos']);?> </h1>
                           </div>
                           <div class="col">
@@ -132,7 +96,6 @@
                           </div>
                       </div>
                       <hr/>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                   </div>
               
                   <div class="col-12 mt-3 pt-3">
@@ -140,17 +103,6 @@
                       <div class="row mt-3">
                           <div class="col">
                               <p class="sub-title">Company Domain</p>
-<<<<<<< HEAD
-                              <h1 class="para">{{ $data['company']->domain }} </h1>
-                          </div>
-                          <div class="col">
-                              <p class="sub-title">Registered In</p>
-                              <p class="para"> {{$data['company']->year}} </p>
-                          </div>
-                          <div class="col">
-                              <p class="sub-title">Email</p>
-                              <a href="mailto:{{ $data['company']->email}}" class="btn btn-link m-0 p-0"> {{$data['company']->email}} </a>
-=======
                               <h1 class="para"><?php echo($row1['domain']);?> </h1>
                           </div>
                           <div class="col">
@@ -160,7 +112,6 @@
                           <div class="col">
                               <p class="sub-title">Email</p>
                               <a href="mailto:{{ $data['company']->email}}" class="btn btn-link m-0 p-0"> <?php echo($row['email']);?> </a>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                               <div class="alert alert-info mt-3">
                                   <small>Click on the email to send the mail to the company.</small>
                               </div>
@@ -186,11 +137,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     <!-- {{-- Carousel JS --}} -->
-<<<<<<< HEAD
-    {{-- <script src="/jquery-3.4.1.js"></script> --}}
-=======
     <!-- {{-- <script src="/jquery-3.4.1.js"></script> --}} -->
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
     <script src="/js/owl.carousel.js"></script>
 </body>
 </html>

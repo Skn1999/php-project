@@ -24,14 +24,5 @@
 	$jCompSubmit = mysqli_query($con, $sinQry) or die(mysqli_error($con));
 
 
-	// echo $jCompSubmit;
-	// echo $name;
-	// echo $jobPos;
-	// echo $skills;
-	// echo $email;
-	// // echo $eligibility; --removed
-	// echo $vacancy;
-	// echo $addr;
-
 	header('location: ../includes/company.php');
 ?>

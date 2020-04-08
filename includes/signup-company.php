@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-
-    <link rel="stylesheet" href="../css/app.css">
-    <link rel="stylesheet" href="../css/button.css">
-    <title>Sign up Company</title>
-=======
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../css/button.css">
@@ -87,18 +81,13 @@
     </script>
 
 
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
 </head>
 
 <body>
 
     <div class="container justifyCenter">
         <div class="mt-3 mb-3 mx-auto">
-<<<<<<< HEAD
-            <a href="/"> <img src="/assets/images/blue-logo.png" alt="logo" /></a>
-=======
             <a href="/tmp/index.php"> <img src="./../assets/images/blue-logo.png" alt="logo" /></a>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
         </div>
     </div>
     </div>
@@ -113,11 +102,7 @@
                     <div class="row align-items-end">
                         <div class="w-100">
                             <a href="./signup-institute.php">
-<<<<<<< HEAD
-                                <p class="para white-text">Are you an Institute? <em> Sign up here.</em>
-=======
                                 <p class="para white-text">Is it an Institute? <em> Sign up here.</em>
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                                 </p>
                             </a>
                         </div>
@@ -129,93 +114,53 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 p-0">
-<<<<<<< HEAD
-                <form style="padding: 2rem; width:100%" class="grayBg" action="/company" method="post" autocomplete="off" autofill="off">
-                    <!-- @csrf -->
-                    <div class="form-group">
-                        <label for="name">Let's start with the name of the company</label>
-                        <input type="text" class="form-control" name="name" value="">
-                        <span class="text-danger">
-=======
                 <form action="../jCompanyPhp/jSignUp.php"  method="POST" autocomplete="off" autofill="off"style="padding: 2rem; width:100%" class="grayBg" id="form">
                     <!-- @csrf -->
                     <div class="form-group">
                         <label for="name">Let's start with the name of the company</label>
                         <input type="text" class="form-control" name="comName" value="" id="name">
                         <span class="text-danger" id="nameErr">
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                             <!-- {{ $errors->first("name")}} -->
                         </span>
                     </div>
                     <div class="form-group ">
                         <label for="year">The year you got registered</label>
-<<<<<<< HEAD
-                        <input type="number" class="form-control" name="year" value="">
-                        <span class="text-danger">
-=======
                         <input type="number" class="form-control" name="year" value="" id="year">
                         <span class="text-danger" id="yearErr">
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                             <!-- {{ $errors->first("year")}} -->
                         </span>
                     </div>
                     <div class="form-group ">
                         <label for="domain">Domain of your company</label>
-<<<<<<< HEAD
-                        <input type="text" class="form-control" name="domain" value="">
-                        <span class="text-danger">
-=======
                         <input type="text" class="form-control" name="domain" value="" id="domain">
                         <span class="text-danger" id="domainErr">
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                             <!-- {{ $errors->first("domain")}} -->
                         </span>
                     </div>
                     <div class="form-group ">
                         <label for="email">Email of your company</label>
-<<<<<<< HEAD
-                        <input type="email" class="form-control" name="email" value="">
-                        <span class="text-danger">
-=======
                         <input type="email" class="form-control" name="email" value="" id="email">
                         <span class="text-danger" id="emailErr">
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                             <!-- {{ $errors->first("email")}} -->
                         </span>
                     </div>
                     <div class="form-group ">
-<<<<<<< HEAD
-                        <label for="password">Set password</label>
-                        <input type="password" class="form-control" name="password" required>
-                        <span class="text-danger">
-=======
                         <label for="password">Secure password</label>
                         <input type="password" class="form-control" name="pwd1" id="pwd1">
                         <span class="text-danger" id="pwd1Err">
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                             <!-- {{ $errors->first("password")}} -->
                         </span>
                     </div>
                     <div class="form-group ">
                         <label for="cpassword">Confirm password</label>
-<<<<<<< HEAD
-                        <input type="password" class="form-control" name="cpassword" required>
-                        <span class="text-danger">
-=======
                         <input type="password" class="form-control" name="pwd2" id="pwd2">
                         <span class="text-danger" id="pwd2Err">
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                             <!-- {{ $errors->first("cpassword")}} -->
                         </span>
                     </div>
                     <div class="form-group mt-5">
                         <button type="submit" class=" w-100">Sign up</button>
                     </div>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                 </form>
             </div>
         </div>
