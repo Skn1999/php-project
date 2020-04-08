@@ -1,17 +1,10 @@
 <?php
-		
-	// echo("arg1");	
-	
-	
 
 	$con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
 	$email = $_POST['email'];
 	$selQry="select email from company where email='$email';";	
 	$selQryRst=mysqli_query($con,$selQry) or die(mysqli_error($con));
 	$x=mysqli_num_rows($selQryRst);
-
-	// $x=$x+50;
-	// echo $x;
 
 	if($x>0)
 	{
@@ -29,14 +22,8 @@
 		
 		$sinQry="insert into company(name,year,domain,email,password) values('$name',$year,'$domain','$email','$pwd1');";
 		$jCompSubmit = mysqli_query($con, $sinQry) or die(mysqli_error($con));
-		// echo $comName;
-		// echo $year;
-		// echo $domain;
-		// echo $email;
-		// echo $pwd1;
-		// echo $pwd2;
-		echo "<br><h3>Ur r most WELCOME</h3><br>";
-		echo "After 7 seconds you will be redirected back to Login Page";
-		header('refresh:7; url = ../includes/login.php');
+		// echo "<br><h3>Ur r most WELCOME</h3><br>";
+		echo "Succesfull";
+		header('refresh:1; url = ../includes/login.php');
 	}
 ?>
