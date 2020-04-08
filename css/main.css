@@ -122,3 +122,9 @@
   .form-btn:hover{
     filter: brightness(90%);
   }
+
+  .dw-image{
+      width: 100%;
+      height: auto;
+      padding: 5rem;
+  }

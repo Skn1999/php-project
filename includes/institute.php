@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CRS</title>
     <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/company.css">
+
     <!-- {{-- Carousel CSS --}} -->
-    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
     <!-- Bootstrap CSS -->
@@ -23,7 +25,6 @@
         <div id="dw-s2" class="bmd-layout-drawer bg-faded sideDrawer ">
           <div>
             <img src="./../assets/images/blue-logo.png" alt="hired.">
-            
 
             <?php
 
@@ -77,7 +78,7 @@
                     <!-- {{-- Recent Jobs --}} -->
                     <div class='contentBlock' >
                         <h4 class="sub-heading">Recently Added</h4>
-                        <div class="owl-carousel owl-theme">
+                        
 
                     <?php
 
@@ -106,35 +107,40 @@
                             </div>
                     <?php
                         }
-
-                        while($row = mysqli_fetch_array($selQryRst))
-                        {
-
                     ?>
-                            <div class="item">
-                                <div class="jobCard" >
-                                    <h2 class="jobtitle"> Job Profile: <?php echo ($row['jobPos']);?> </h2>
-                                    <p>
-                                        <span class="parameter">Posted by : </span>
-                                        <span class="paramValue"> <?php echo ($row['name']);?> </span>
-                                    </p>
+                        <div class="owl-carousel owl-theme">
+                            <?php
 
-                                    <p>
-                                        <span class="parameter">Salary : </span>
-                                        <span class="paramValue"><?php echo ($row['salary']);?> LPA</span>
-                                    </p>
+                                while($row = mysqli_fetch_array($selQryRst))
+                                {
 
-                                    <a href="./jobInfo.php?id=<?php echo($row['email']);?>" class="linkBtn">
-                                        <span class="btn">
-                                             VIEW MORE
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <br>
-                    <?php
-                        }
-                    ?>    
+                            ?>
+                                
+                                    <div class="item">
+                                        <div class="jobCard" >
+                                            <h2 class="jobtitle"> <?php echo ($row['jobPos']);?> </h2>
+                                            <p>
+                                                <span class="parameter">Posted by : </span>
+                                                <span class="paramValue"> <?php echo ($row['name']);?> </span>
+                                            </p>
+
+                                            <p>
+                                                <span class="parameter">Salary : </span>
+                                                <span class="paramValue"><?php echo ($row['salary']);?> LPA</span>
+                                            </p>
+
+                                            <a href="./jobInfo.php?id=<?php echo($row['email']);?>" class="linkBtn">
+                                                <span class="btn">
+                                                    VIEW MORE
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    
+                            <?php
+                                }
+                            ?>    
 
                         </div>
                     </div>

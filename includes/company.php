@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CRS</title>
     <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/company.css">
+
     <!-- {{-- Carousel CSS --}} -->
-    <link rel="stylesheet" href="../css/owl.carousel.css">
-    <link rel="stylesheet" href="../css/carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
@@ -34,8 +36,6 @@
                   $selQry = "select * from company where email='$email';";
                   $selQryRst = mysqli_query($con,$selQry) or die(mysqli_error($con));
 
-                  // $nor=0;
-                  // $nor=mysqli_num_rows($selQryRst);
 
                   $row = mysqli_fetch_array($selQryRst);
               ?>
@@ -80,7 +80,6 @@
                   <!-- {{-- Pending Jobs --}} -->
                   <div class='contentBlock' >
                       <h4 class="sub-heading">Pending</h4>
-                      <div class="owl-carousel owl-theme">
 
 
                         <?php
@@ -89,17 +88,18 @@
                             // session_start();
                             $email=$_SESSION['email'];
 
-                        //     $selQry = "select * from job where email='$email';";
-                        //     $selQryRst = mysqli_query($con,$selQry) or die(mysqli_error($con));
+                            $selQry = "select * from job where email='$email';";
+                            $selQryRst = mysqli_query($con,$selQry) or die(mysqli_error($con));
 
-                        //     // $nor=0;
-                        //     $nor=mysqli_num_rows($selQryRst);
+                            // $nor=0;
+                            $nor=mysqli_num_rows($selQryRst);
 
-                        //     // echo $nor;
+                            // echo $nor;
 
-                        //   if(!mysqli_num_rows($selQryRst))
-                        //   {
+                          if(!mysqli_num_rows($selQryRst))
+                          {
                         ?>
+                            <div class="owl-carousel owl-theme">
                              <div class="item">
                                <div class="jobCard">
                                    <p>
@@ -107,42 +107,44 @@
                                    </p>
                                </div>
                              </div>
+                            </div>
+                        
                         <?php
-                        // }
-                        //   while($row = mysqli_fetch_array($selQryRst))
-                            while($row <5 )
-                          {
-                        ?>
-                                  <div class="item">
-                                    <div class="jobCard">
-                                        <h2 class="jobtitle">Job Profile: Designer </h2>
-                                        <p>
-                                            <span class="parameter">Posted by : </span>
-                                            <span class="paramValue">XYZ</span>
-                                        </p>
+                         }
 
-                                        <p>
-                                            <span class="parameter">Job Location : </span>
-                                            <span class="paramValue"> Bangalore </span>
-                                        </p>
+                         ?>
+                         <div class="owl-carousel owl-theme">
+                            <?php
+                                while($row = mysqli_fetch_array($selQryRst))    
+                                {
+                            ?>
+
+                                    <div class="item">
+                                        <div class="jobCard">
+                                            <h2 class="jobtitle"><?php echo ($row['jobPos']);?> </h2>
+                                            <p>
+                                                <span class="parameter">Posted by : </span>
+                                                <span class="paramValue"><?php echo ($row['name']);?> </span>
+                                            </p>
+
+                                            <p>
+                                                <span class="parameter">Job Location : </span>
+                                                <span class="paramValue"> <?php echo ($row['address']);?> </span>
+                                            </p>
 
 
-                                        <p>
-                                            <span class="parameter">Salary : </span>
-                                            <span class="paramValue">8 LPA</span>
-                                        </p>
+                                            <p>
+                                                <span class="parameter">Salary : </span>
+                                                <span class="paramValue"> <?php echo ($row['salary']);?></span>
+                                            </p>
 
-                                        <!-- <a href="#" class="linkBtn">
-                                            <span class="btn">
-                                                VIEW MORE
-                                            </span>
-                                        </a> -->
-                                    </div>
-                                    <br>
-                                  </div>
-                          <?php
+                                        </div>
+                                        <br>
+                                </div>
+                            
+                            <?php
                             }
-                          ?>
+                            ?>
                                                     
                       </div>
                   </div>
@@ -169,12 +171,6 @@
                           <input class="form-control" name="salary" type="text" variant="outlined" id="sal">
                           <span class="text-danger" id="salErr"></span>
                       </div>
-
-                      <!-- <div class="form-group">
-                          <label for="eligibility" class="bmd-label-floating">Eligibility criteria</label>
-                          <input class="form-control" id="eligibility" name="eligibility" type="text" variant="outlined">
-                          <span class="text-danger">{{ $errors->first("eligibility")}}</span>
-                      </div> -->
 
                       <div class="form-group">
                           <label for="vacancy" class="bmd-label-floating">Number of Vacancies</label>
@@ -260,30 +256,30 @@
                     });
                 });
             </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-    <!-- {{-- Carousel JS --}} -->
-    <!-- {{-- <script src="/jquery-3.4.1.js"></script> --}} -->
-    <script src="../js/owl.carousel.js"></script>
-    <script>
-        $(".owl-carousel").owlCarousel({
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:4
-                }
-            }
-    })
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+            <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+            <!-- {{-- Carousel JS --}} -->
+            <!-- {{-- <script src="/jquery-3.4.1.js"></script> --}} -->
+            <script src="../js/owl.carousel.js"></script>
+            <script>
+                $(".owl-carousel").owlCarousel({
+                    margin:15,
+                    nav:true,
+                    responsive:{
+                        0:{
+                            items:1
+                        },
+                        600:{
+                            items:3
+                        },
+                        1000:{
+                            items:4
+                        }
+                    }
+            })
     </script>
 </body>
 </html>

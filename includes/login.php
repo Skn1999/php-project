@@ -80,7 +80,7 @@
                             <h2 style="text-align: center; margin: auto 0; width:100%" class="sub-heading">Login</h2>
                         </div>
                     </div>
-                    <form method="POST" action="./company.php" style="padding: 2rem; height: 500px" id="form">
+                    <form method="POST" action="../jLoginPhp/jLogin.php" style="padding: 2rem; height: 500px" id="form">
                         
                         <div class="form-group ">
                             <label for="email">Email</label>
