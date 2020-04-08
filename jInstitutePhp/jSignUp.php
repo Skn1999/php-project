@@ -4,10 +4,10 @@
 
 	// $con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
 
-	$con=mysqli_connect("localhost", "root", null) or die(mysqli_error($con));
-	mysqli_query($con, "CREATE DATABASE CRS");
-	mysqli_query($con, "USE CRS");
-	mysqli_query($con, "create table institute ( iid int(11) primary key auto_increment, name varchar(20), affNo int(4), email varchar(30), year int(4), password varchar(30) )" );
+	$con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
+	// mysqli_query($con, "CREATE DATABASE CRS");
+	// mysqli_query($con, "USE CRS");
+	// mysqli_query($con, "create table institute ( iid int(11) primary key auto_increment, name varchar(20), affNo int(4), email varchar(30), year int(4), password varchar(30) )" );
 	$email = $_POST['email'];
 	$selQry="select email from institute where email='$email';";	
 	$selQryRst=mysqli_query($con,$selQry) or die(mysqli_error($con));
