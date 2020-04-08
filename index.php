@@ -1,14 +1,5 @@
-
 <?php
-    
-$con=mysqli_connect("localhost", "root", null, "db101") or die(mysqli_error($con));
-mysqli_query($con, "CREATE DATABASE CRS");
-mysqli_query($con, "USE CRS");
-mysqli_query($con, "create table company ( cid int(11) primary key auto_increment, name varchar(30), year int(4), domain varchar(20), email varchar(30), password varchar(30) )" );
-mysqli_query($con, "create table institute ( iid int(11) primary key auto_increment, name varchar(30), affNo int(4), email varchar(30), year int(4), password varchar(30) )" );
-mysqli_query($con, "create table job ( email varchar(30), name varchar(20), jobPos varchar(100), skill varchar(255), vacancies int(11), address varchar(100), salary int(11) )" );
-
-
+include_once('./connection.php')
 ?>
 
 <!DOCTYPE html>

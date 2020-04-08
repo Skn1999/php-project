@@ -48,19 +48,12 @@
 </html>
 
 <?php
-		
-	// echo("arg1");	
-	
-	
 
 	$con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
 	$email = $_POST['email'];
 	$selQry="select email from company where email='$email';";	
 	$selQryRst=mysqli_query($con,$selQry) or die(mysqli_error($con));
 	$x=mysqli_num_rows($selQryRst);
-
-	// $x=$x+50;
-	// echo $x;
 
 	if($x>0)
 	{
