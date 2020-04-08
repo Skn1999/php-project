@@ -13,7 +13,11 @@
 
     <div class="container justifyCenter">
             <div class="mt-3 mb-3 mx-auto">
+<<<<<<< HEAD
              <a href="/"> <img src="/assets/images/blue-logo.png" alt="hired."/></a>
+=======
+             <a href="/tmp/index.php"> <img src="./../assets/images/blue-logo.png" alt="hired."/></a>
+>>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
             </div>
         </div>
     </div>

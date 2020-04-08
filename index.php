@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+=======
+<html lang>
+>>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,8 +76,13 @@
             <div  class="navbar" position="static">
                 <div  class="justifyCenter container "  >
                         <div class=" toolbar title">
+<<<<<<< HEAD
                                 <a href="/">
                                     <img class="logo" src="/assets/images/logo.png" alt="hired." />
+=======
+                                <a href="/tmp/index.php">
+                                    <img class="logo" src="./assets/images/logo.png" alt="hired." />
+>>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                                 </a>
                         </div>
                         <div class="" >
@@ -121,12 +130,20 @@
                         <div class="paper">
                             <h3 class="sub-heading">Connect people with the right jobs.</h3>
                             <p class="para">If you are an educational institution whose looking for better placement opportunities then you've come the right place.</p>
+<<<<<<< HEAD
                             <a href="/company/create" class="link">Get started</a>
+=======
+                            <a href="./includes/signup-institute.php" class="link">Get started</a>
+>>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                         </div>
                         <div class="paper" >
                             <h3 class="sub-heading">Get you job postings & info out to the world.</h3>
                             <p class="para">If you are a company looking for the best and fresh talent, then look no further and try us today!</p>
+<<<<<<< HEAD
                             <a href="/institute/create" class="link">Get started</a>
+=======
+                            <a href="./includes/signup-company.php" class="link">Get started</a>
+>>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                         </div>
                     </div>
                 </div>
@@ -149,7 +166,11 @@
                         </div>
                     </div>
                     <div class=" col-sm col-md-5">
+<<<<<<< HEAD
                         <img class="img" src="/assets/images/blobs.png" alt="Blobs image"/>
+=======
+                        <img class="img" src="./assets/images/blobs.png" alt="Blobs image"/>
+>>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                     </div>
                 </div>
             </div>
@@ -159,7 +180,11 @@
                 <div class="container" >
                     <div class="row">
                         <div class=" col-sm col-md-2 offset-md-2 ">
+<<<<<<< HEAD
                             <img src="/assets/images/blue-logo.png" alt = "hired."/>
+=======
+                            <img src="./assets/images/blue-logo.png" alt = "hired."/>
+>>>>>>> 000a321677d69317ccbd38c71a972cf5665e8dd6
                         </div>
                         <div class="col-sm col-md-3 offset-md-1">
                             <h3 class="sub-heading">Contact us</h3>
