@@ -29,7 +29,7 @@
           </div>
           <div>
             <!-- {{-- <a href="/company/{{ $data['data']->company_id }}/edit"> <button class="btn" >Edit Profile</button></a> --}} -->
-            <a href="/login"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
+            <a href="./../login"> <button class="btn" >Log Out <img class="logOutBtn" src="./../assets/svgs/back-arrow.svg" alt=""> </button></a>
         </div>
         </div>
         <main class="bmd-layout-content">
@@ -47,7 +47,7 @@
       
                 <?php
 
-                  $con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+                  $con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
                   // echo($_GET['id']);
                   $email=$_GET['id'];
                   $selQry = "select * from job where email='$email';";
@@ -138,6 +138,6 @@
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     <!-- {{-- Carousel JS --}} -->
     <!-- {{-- <script src="/jquery-3.4.1.js"></script> --}} -->
-    <script src="/js/owl.carousel.js"></script>
+    <script src="../js/owl.carousel.js"></script>
 </body>
 </html>

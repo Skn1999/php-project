@@ -8,7 +8,7 @@
 	$addr=$_POST['location'];
 	$salary=$_POST['salary'];
 
-	$con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+	$con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
 	session_start();
 
 	$email=$_SESSION['email'];

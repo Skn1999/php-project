@@ -2,21 +2,12 @@
 		
 	// echo("arg1");	
 
-	$con=mysqli_connect("localhost", "root", "", "db101");
+	// $con=mysqli_connect("localhost", "root", null, "CRS") or die(mysqli_error($con));
 
-	if (mysqli_connect_errno()) {
-		echo "Failed to connect to MySQL: " ;
-		echo "<br><br>Creating the database.....";
-		$sql = "CREATE DATABASE myDB";
-		if (mysqli_query($con , $sql)) {
-			echo "Database created successfully";
-		} else {
-			echo "Error creating database. PLease create in manually";
-		}
-		die;
-	}
-	  
-
+	$con=mysqli_connect("localhost", "root", null) or die(mysqli_error($con));
+	mysqli_query($con, "CREATE DATABASE CRS");
+	mysqli_query($con, "USE CRS");
+	mysqli_query($con, "create table institute ( iid int(11) primary key auto_increment, name varchar(20), affNo int(4), email varchar(30), year int(4), password varchar(30) )" );
 	$email = $_POST['email'];
 	$selQry="select email from institute where email='$email';";	
 	$selQryRst=mysqli_query($con,$selQry);
