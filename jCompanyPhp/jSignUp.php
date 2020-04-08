@@ -4,7 +4,10 @@
 	
 	
 
-	$con=mysqli_connect("localhost", "root", "root@123", "CRS") or die(mysqli_error($con));
+	$con=mysqli_connect("localhost", "root", null) or die(mysqli_error($con));
+	mysqli_query($con, "CREATE DATABASE CRS");
+	mysqli_query($con, "USE CRS");
+	mysqli_query($con, "create table company ( cid int(11) primary key auto_increment, name varchar(20), year int(4), domain varchar(20), email varchar(30), password varchar(30) )" );
 	$email = $_POST['email'];
 	$selQry="select email from company where email='$email';";	
 	$selQryRst=mysqli_query($con,$selQry) or die(mysqli_error($con));
