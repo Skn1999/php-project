@@ -10994,7 +10994,13 @@ a.text-dark:focus {
 
 .paper {
   width: 60%;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+}
+
+.paper:hover{
   box-shadow: 0 10px 30px -5px rgba(54, 202, 142, 0.16);
+
 }
 
 .heading, .heading2 {
