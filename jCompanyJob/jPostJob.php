@@ -14,10 +14,10 @@
 	$email=$_SESSION['email'];
 
 	$selQry = "select * from company where email='$email';";
-    $selQryRst = mysqli_query($con,$selQry) or die(mysqli_error($con));
-    $row = mysqli_fetch_array($selQryRst);
+    	$selQryRst = mysqli_query($con,$selQry) or die(mysqli_error($con));
+    	$row = mysqli_fetch_array($selQryRst);
 
-    $name=$row['name'];
+    	$name=$row['name'];
 
 
 	$sinQry="insert into job values('$email','$name','$jobPos','$skill',$vacancy,'$addr',$salary);";
