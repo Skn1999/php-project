@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../css/button.css">
     <title>Login Page</title>
 
-    <script>
+
+    <script type="text/javascript">
         
-        $(function() {
+        $(document).ready(function() {
             
-            $("#form").submit(function(event) {
+            $("button").click(function(event) {
 
                 var email=$("#email").val();
                 var pwd=$("#pwd").val();
+                var orgTyp=$("#orgTyp").val();
+
                 // document.write(email);
+                // document.write(orgTyp);
+
                 if(email=="" || pwd=="")
                 {
                     if(email=="")
@@ -28,11 +33,22 @@
                 }
                 else
                 {
-                    var data=$("#form : input").serializeArray();
-                    $.post($("#form").attr("action"),data,function(info){
+                    $.ajax({
+                        url: '../jLoginPhp/jLogin.php',
+                        type: 'POST',
+                        // dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+                        data: {'email':email, 'pwd':pwd, 'orgTyp':orgTyp},
 
-                        //Code
-
+                        success: function(response)
+                        {
+                            if(response=="error")
+                                $("#usrErr").html("invalid username/password");
+                            else if(response=="institute")
+                                window.location.replace("../includes/institute.php");
+                            else if(response=="company")
+                                window.location.replace("../includes/company.php");
+                            // document.write(response);
+                        } 
                     });
                 }
                 event.preventDefault();
@@ -80,10 +96,10 @@
                             <h2 style="text-align: center; margin: auto 0; width:100%" class="sub-heading">Login</h2>
                         </div>
                     </div>
-                    <form method="POST" action="../jLoginPhp/jLogin.php" style="padding: 2rem; height: 500px" id="form">
+                    <form style="padding: 2rem; height: 500px" id="form">
                         
                         <div class="form-group ">
-                            <label for="email">Email</label>
+                            <label for="email">Email</label>  <span class="text-danger" id="usrErr" style="float: right" ></span>
                             <input type="email" class="form-control form-control-lg" name="email" id="email">
                             <span class="text-danger" id="mailErr"></span>
                         </div>
@@ -95,7 +111,7 @@
                         </div>
                         <div class="form-group">
                             <label for="type">Company/Institute</label>
-                            <select name="orgTyp" class="custom-select custom-select-lg">
+                            <select name="orgTyp" class="custom-select custom-select-lg" id="orgTyp">
                                 <option selected value="company">Company</option>
                                 <option value="institute">Institute</option>
                             </select>
