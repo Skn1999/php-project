@@ -41,7 +41,7 @@
 			$jCompSubmit = mysqli_query($con, $sinQry) or die(mysqli_error($con));
 			echo "<br><div class='container'><h3 class='heading'>Thanks for registering.</h3><br>";
 			echo "<p class='para'>After 3 seconds you will be redirected back to Login Page</p></div>";
-			header('refresh:7; url = ../includes/login.php');
+			header('refresh:3; url = ../includes/login.php');
 		}
 	?>
 </body>
